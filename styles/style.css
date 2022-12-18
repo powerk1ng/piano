@@ -1,0 +1,166 @@
+@import url(/styles/reset.css);
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap");
+body {
+  font-family: 'Poppins';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background: #e3f2fd;
+}
+
+.wrapper {
+  max-width: 100%;
+  border-radius: 20px;
+  background: #141414;
+  padding: 35px 40px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #b2b2b2;
+  gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header__title {
+  font-size: 1.6rem;
+}
+
+.header__volume-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__volume-slider input {
+  accent-color: #fff;
+}
+
+.header__volume-slider span {
+  font-weight: 500;
+  font-size: 1.19rem;
+  margin-right: 0.9375rem;
+}
+
+.header__keys-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__keys-checkbox input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 3.75rem;
+  height: 1.875rem;
+  background: #4b4b4b;
+  border-radius: 1.875rem;
+  margin-left: 0.9375rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.header__keys-checkbox input::before {
+  content: '';
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 50%;
+  background: #fff;
+  outline: none;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.header__keys-checkbox input:checked:before {
+  left: 50%;
+  background: #a2a2a2;
+}
+
+.keys__list {
+  color: #a2a2a2;
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.keys__list .key {
+  position: relative;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.keys__list .key:active {
+  scale: 0.99;
+}
+
+.keys__list span {
+  bottom: 1.25rem;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 1.13rem;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.keys__list .white {
+  width: 70px;
+  height: 230px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(85, #c21111), color-stop(4%, #eee));
+  background: linear-gradient(#c21111 85, #eee 4%);
+  border-radius: 8px;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.keys__list .white.active {
+  opacity: 0.5;
+}
+
+.keys__list .black {
+  width: 44px;
+  height: 140px;
+  margin: 0 -22px 0 -22px;
+  z-index: 100;
+  background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#000));
+  background: linear-gradient(#333, #000);
+  border-radius: 0 0 5px 5px;
+  color: #fff;
+}
+
+.opacity {
+  opacity: 0;
+}
+/*# sourceMappingURL=style.css.map */

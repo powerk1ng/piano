@@ -1,0 +1,149 @@
+@import url(/styles/reset.css);
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap');
+
+@function rem($px) {
+    $result: ($px / 16) + rem;
+    @return $result;
+}
+
+body {
+    font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #e3f2fd;
+}
+
+.wrapper {
+    max-width: 100%;
+    border-radius: 20px;
+    background: #141414;
+    padding: 35px 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #b2b2b2;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    &__title {
+        font-size: 1.6rem
+    }
+
+    &__volume-slider {
+        display: flex;
+        align-items: center;
+        
+        input {
+            accent-color: #fff;
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 1.19rem;
+            margin-right: rem(15);
+        }
+    }
+
+    &__keys-checkbox {
+        display: flex;
+        align-items: center;
+        
+        input {
+            appearance: none;
+            width: rem(60);
+            height: rem(30);
+            background: #4b4b4b;
+            border-radius: rem(30);
+            margin-left: rem(15);
+            cursor: pointer;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: rem(25);
+                height: rem(25);
+                border-radius: 50%;
+                background: #fff;
+                outline: none;
+                position: absolute;
+                left: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: .3s ease;
+            }
+            &:checked:before {
+                left: 50%;
+                background: #a2a2a2;
+            }
+        }
+
+    }
+}
+
+.keys {
+
+    &__list {
+        color: #a2a2a2;
+        padding-top: 40px;
+        display: flex;
+        text-transform: uppercase;
+        position: relative;
+        
+        
+        .key {
+            position: relative;
+            transition: .2s ease;
+            cursor: pointer;
+            &:active {
+                scale: (0.99);
+            }
+        }
+
+
+        span {
+            bottom: rem(20);
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 1.13rem;
+            transition: .3s ease-in-out;
+        }
+
+        .white {
+            width: 70px;
+            height: 230px;
+            background: linear-gradient( rgb(194, 17, 17) 85, #eee 4%);
+            border-radius: 8px;
+            border: 1px solid #000;
+            color: #000;
+        }
+        
+        .white.active {
+           opacity: 0.5;
+        }
+    
+        .black {
+            width: 44px;
+            height: 140px;
+            margin: 0 -22px 0 -22px;
+            z-index: 100;
+            background: linear-gradient( #333, #000);
+            border-radius: 0 0 5px 5px; 
+            color: #fff;    
+        }
+    }
+
+}   
+
+
+
+
+.opacity {
+    opacity: 0;
+}
+
